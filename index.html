@@ -2,10 +2,11 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-            function handleText() {
+            async function handleText() {
                 text = document.getElementById("code").value;
 
-                let resp = httpGet("https://auth.exploitapublic.repl.co/" + text)
+                let resp = await httpGet("https://auth.exploitapublic.repl.co/" + text)
+                console.log(resp)
                 if (resp != "0") {
                     document.getElementById("area").innerHTML = resp;
                 }
@@ -13,7 +14,6 @@
 
             function httpGet(url) {
                 $.get(url, function(data, status) {
-                    console.log(data);
                     return data;
                 })
             }
