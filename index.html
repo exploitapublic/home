@@ -4,11 +4,13 @@
             function handleText() {
                 text = document.getElementById("code").value;
 
-                fetch("https://auth.exploitapublic.repl.co/" + text).then(response => {
-                    if (response != "0") {
-                        console.log(response.text())
-                        document.getElementById("area").innerHTML = response;
-                    }
+                fetch("https://auth.exploitapublic.repl.co/" + text).then(raw_response => {
+                    raw_response.text().then(response => {
+                        if (response != "0") {
+                            console.log(response)
+                            document.getElementById("area").innerHTML = response;
+                        }
+                    })
                 })
             }
         </script>
