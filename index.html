@@ -1,8 +1,22 @@
 <html>
     <head>
+        <script>
+            var prevtext = document.getElementById("code").innerText
 
+            while (true) {
+                text = document.getElementById("code").innerText
+                if (text != prevtext) {
+                    prevtext = text
+                    handleText(text)
+                }
+            }
+
+            function handleText(text) {
+                alert(text)
+            }
+        </script>
     </head>
     <body>
-        <input type="text" placeholder="Login Code">
+        <input type="text" placeholder="Login Code" id="code">
     </body>
 </html>
