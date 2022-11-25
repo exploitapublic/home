@@ -6,7 +6,8 @@
 
                 fetch("https://auth.exploitapublic.repl.co/" + text).then(response => {
                     if (response != "0") {
-                        document.getElementById("area").innerHTML = response.body;
+                        console.log(response)
+                        document.getElementById("area").innerHTML = response;
                     }
                 })
             }
