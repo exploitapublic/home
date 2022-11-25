@@ -1,20 +1,14 @@
 <html>
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-            async function handleText() {
+            function handleText() {
                 text = document.getElementById("code").value;
 
-                let resp = await httpGet("https://auth.exploitapublic.repl.co/" + text)
-                console.log(resp)
-                if (resp != "0") {
-                    document.getElementById("area").innerHTML = resp;
-                }
-            }
-
-            function httpGet(url) {
-                $.get(url, function(data, status) {
-                    return data;
+                fetch("https://auth.exploitapublic.repl.co/" + text).then(response => {
+                    console.log(response)
+                    if (resp != "0") {
+                        document.getElementById("area").innerHTML = response;
+                    }
                 })
             }
         </script>
