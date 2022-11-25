@@ -1,10 +1,10 @@
 <html>
     <head>
         <script>
-            var prevtext = document.getElementById("code").innerText
+            var prevtext = document.getElementById("code").value
 
             while (true) {
-                text = document.getElementById("code").innerText
+                text = document.getElementById("code").value
                 if (text != prevtext) {
                     prevtext = text
                     handleText(text)
