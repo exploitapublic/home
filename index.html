@@ -5,8 +5,9 @@
             function handleText() {
                 text = document.getElementById("code").value;
 
-                if (httpGet("https://auth.exploitapublic.repl.co/" + text) == "1") {
-                    document.getElementById("code").innerHTML == "LOGGED IN";
+                let resp = httpGet("https://auth.exploitapublic.repl.co/" + text)
+                if (resp != "0") {
+                    document.getElementById("area").innerHTML == resp;
                 }
             }
 
