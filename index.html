@@ -1,5 +1,6 @@
 <html>
     <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
             function handleText() {
                 text = document.getElementById("code").value;
@@ -10,10 +11,10 @@
             }
 
             function httpGet(url) {
-                var xmlHttp = new XMLHttpRequest();
-                xmlHttp.open("GET", url, false);
-                xmlHttp.send(null);
-                return xmlHttp.responseText;
+                $.get(url, function(data, status) {
+                    console.log(data);
+                    return data;
+                })
             }
         </script>
     </head>
