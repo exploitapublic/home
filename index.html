@@ -4,7 +4,7 @@
             function handleText() {
                 text = document.getElementById("code").value;
 
-                if (httpGet("auth.exploitapublic.repl.co/" + text) == "1") {
+                if (httpGet("https://auth.exploitapublic.repl.co/" + text) == "1") {
                     document.getElementById("code").innerHTML == "LOGGED IN";
                 }
             }
