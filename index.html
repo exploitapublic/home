@@ -2,7 +2,18 @@
     <head>
         <script>
             function handleText() {
-                text = document.getElementById("code").value
+                text = document.getElementById("code").value;
+
+                if (httpGet("auth.exploitapublic.repl.co/" + text) == "1") {
+                    document.getElementById("code").innerHTML == "LOGGED IN";
+                }
+            }
+
+            function httpGet(url) {
+                var xmlHttp = new XMLHttpRequest();
+                xmlHttp.open("GET", url, false);
+                xmlHttp.send(null);
+                return xmlHttp.responseText;
             }
         </script>
     </head>
