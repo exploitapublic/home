@@ -66,12 +66,25 @@
         font-family: 'Inter', sans-serif;
         font-size: calc(.6rem + .4vw);
         color: var(--color-text);
-        background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Newfoundland_dog_Smoky.jpg/640px-Newfoundland_dog_Smoky.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
         font-weight: 300;
         padding: 0 calc(var(--size-bezel) * 3);
         }
+        body, html {
+  height: 100%;
+}
+
+.bg { 
+  /* The image used */
+  background-image: url("https://www.purina.co.uk/sites/default/files/2020-11/Working%20Dogs%20Everything%20You%20Need%20to%20KnowHERO.jpeg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
         h1, h2, h3 {
         font-weight: 900;
         }
@@ -171,6 +184,7 @@
       </style>
     </head>
     <body>
+      <div class="bg">
       <article class="l-design-widht">
         <div class="card">
           <h2>
@@ -208,6 +222,7 @@
           <path fill="var(--color-accent)" d="M11.07,5.42a5.45,5.45,0,0,1,0-4.85,1,1,0,0,1,1.79.89,3.44,3.44,0,0,0,0,3.06,1,1,0,1,1-1.79.89Z"/>
         </symbol>
       </svg>
+      </div>
     </body>
   </html>
 </div>
